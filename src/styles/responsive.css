@@ -6,6 +6,13 @@
 
 @media (orientation: landscape) {
 
+    .guide {
+        --grid-reserve-top: calc(var(--ui-edge-top) + 42px);
+        --grid-reserve-right: calc(var(--guide-btn-panel-width-landscape) + var(--safe-area-right) + var(--space-sm));
+        --grid-reserve-bottom: 0px;
+        --grid-reserve-left: 0px;
+    }
+
     /* ── Guide: кнопки ліворуч ───────────────── */
 
     .guide__btns {

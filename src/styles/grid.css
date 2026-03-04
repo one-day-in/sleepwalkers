@@ -24,8 +24,14 @@
 .game .grid,
 .guide .grid,
 .walker .grid {
-    --_size: min(100dvw - var(--grid-pad) * 2,
-            100dvh - var(--grid-pad) * 2);
+    --grid-reserve-top: 0px;
+    --grid-reserve-right: 0px;
+    --grid-reserve-bottom: 0px;
+    --grid-reserve-left: 0px;
+    --_size: min(
+        100dvw - var(--grid-pad) * 2 - var(--grid-reserve-left) - var(--grid-reserve-right),
+        100dvh - var(--grid-pad) * 2 - var(--grid-reserve-top) - var(--grid-reserve-bottom)
+    );
     width: var(--_size);
     height: var(--_size);
     flex-shrink: 0;

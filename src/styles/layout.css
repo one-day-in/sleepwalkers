@@ -18,6 +18,27 @@
     overflow: hidden;
 }
 
+.game {
+    --grid-reserve-top: calc(var(--score-top) + 44px + var(--space-sm));
+    --grid-reserve-right: clamp(54px, 6.5vw, 86px);
+    --grid-reserve-bottom: calc(var(--safe-area-bottom) + var(--icon-btn-size) + var(--space-sm));
+    --grid-reserve-left: clamp(54px, 6.5vw, 86px);
+}
+
+.guide {
+    --grid-reserve-top: calc(var(--ui-edge-top) + 46px);
+    --grid-reserve-right: 0px;
+    --grid-reserve-bottom: calc(var(--safe-area-bottom) + var(--guide-btn-min-size) + var(--space-xl));
+    --grid-reserve-left: 0px;
+}
+
+.walker {
+    --grid-reserve-top: calc(var(--ui-edge-top) + 46px);
+    --grid-reserve-right: 0px;
+    --grid-reserve-bottom: calc(var(--ui-edge-bottom) + 76px);
+    --grid-reserve-left: 0px;
+}
+
 /* ─── СПІЛЬНІ КУТОВІ КНОПКИ ──────────────────────────────────── */
 
 /* Назад — лівий верхній кут (game.html) */
@@ -331,6 +352,52 @@
 }
 
 @media (max-width: 720px) {
+    .game {
+        --grid-reserve-top: calc(var(--score-top) + 46px + var(--space-sm));
+        --grid-reserve-right: 0px;
+        --grid-reserve-bottom: calc(var(--safe-area-bottom) + 80px);
+        --grid-reserve-left: 0px;
+    }
+
+    .game-qr-dock {
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        gap: 10px;
+        bottom: calc(var(--safe-area-bottom) + 8px);
+    }
+
+    .game-qr-dock--left {
+        left: calc(var(--safe-area-left) + 8px);
+    }
+
+    .game-qr-dock--right {
+        right: calc(var(--safe-area-right) + 8px);
+    }
+
+    .game-qr-dot {
+        width: 42px;
+        height: 42px;
+    }
+
+    .game-qr-popover {
+        width: min(70vw, 220px);
+    }
+
+    .game-qr-dock--left .game-qr-popover,
+    .game-qr-dock--right .game-qr-popover {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: calc(100% + 8px);
+        transform: translateX(-50%) scale(0.96);
+    }
+
+    .game-qr-dock__item:hover .game-qr-popover,
+    .game-qr-dock__item:focus-within .game-qr-popover {
+        transform: translateX(-50%) scale(1);
+    }
+
     .walker__end-turn {
         min-width: min(56vw, 240px);
         min-height: 72px;
