@@ -1,4 +1,4 @@
-import{t as u,D as m,g as y,b as A}from"./fitText-CiV-JiRu.js";import{o as G,e as H}from"./sanitize-hfRfoo9X.js";import{a as w}from"./renderCell-C7h02id-.js";import{i as C}from"./initGuestPage-C9TCYKwj.js";import"./url-XkLgVFj3.js";const E=8;async function k(s){const g=await C(s,{roleType:"guide",invalidParamsHtml:`<div class="waiting-screen">
+import{t as u,D as m,g as y,b as A}from"./fitText-Bd138XTN.js";import{o as G,e as H}from"./sanitize-hr0MzWWz.js";import{a as w}from"./renderCell-C7h02id-.js";import{i as C}from"./initGuestPage-CnyjP-Al.js";import"./url-XkLgVFj3.js";const E=8;async function k(s){const g=await C(s,{roleType:"guide",invalidParamsHtml:`<div class="waiting-screen">
             <p>${u(m).scanQr}</p>
         </div>`});if(!g)return;const{presence:_,store:a,team:r}=g;function v(i=m){s.innerHTML=`<div class="waiting-screen">
             <p>${u(i).waitingLobby}</p>
